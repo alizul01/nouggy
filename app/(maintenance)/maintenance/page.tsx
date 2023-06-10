@@ -2,22 +2,16 @@
 import { Icons } from "@/components/icons";
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
-import { motion } from "framer-motion"; // Untuk animasi
-import { Atma } from "next/font/google";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
-export const atma = Atma({
-  subsets: ["latin"],
-  variable: "--font-display",
-  weight: "500"
-})
 export default function maintenancePage() {
   return (
-    <section className={atma.className}>
+    <section className="font-atma">
       <div className="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden">
         <img src="/img/nouggy-1.jpg" alt="nouggy-img-1" className="absolute h-full w-full object-cover" />
         <div className="absolute inset-0 flex flex-col items-center justify-center space-y-8 bg-white/75">
-          <h1 className="text-6xl font-bold text-[#4d4c16]">Coming Soon</h1>
+          <h1 className="text-6xl font-semibold text-[#4d4c16]">Coming Soon</h1>
           <motion.img
             src="/logo.png"
             alt="Logo"
