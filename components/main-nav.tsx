@@ -15,7 +15,10 @@ export function MainNav({ items }: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
       <Link href="/" className="flex items-center space-x-2">
-        <Image src={'/logo.png'} width={28} alt="image" height={28} />
+        <Image src={'/logo.png'} width={32} alt="image" height={28} />
+        <h4 className={'font-bold text-base '}>
+          Nouggy
+        </h4>
       </Link>
       {items?.length ? (
         <nav className="flex gap-6">
@@ -26,7 +29,7 @@ export function MainNav({ items }: MainNavProps) {
                   key={index}
                   href={item.href}
                   className={cn(
-                    "flex items-center text-sm font-medium text-muted-foreground",
+                    "flex items-center text-base font-medium text-muted-foreground",
                     item.disabled && "cursor-not-allowed opacity-80"
                   )}
                 >
